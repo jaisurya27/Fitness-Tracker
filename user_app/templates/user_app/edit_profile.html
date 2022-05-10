@@ -40,20 +40,20 @@
                             <form class="user" action="" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="full_name"
+                                    <input type="text" class="form-control form-control-user" name="full_name" id="full_name"
                                         placeholder="Full Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="age" id="exampleFirstName"
+                                    <input type="text" class="form-control form-control-user" name="age" id="age"
                                         placeholder="Age"></div>
                                         
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" name="weight" id="exampleFirstName"
+                                    <input type="text" class="form-control form-control-user" name="weight" id="weight"
                                         placeholder="Weight">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control form-control-user" name="height" id="exampleFirstName"
+                                    <input type="text" class="form-control form-control-user" name="height" id="height"
                                         placeholder="Height">
                                 </div></div>
                                 <div class="form-group row">
@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    Add profile
+                                    Edit profile
                                 </button>
                                 <hr>
                                 
@@ -91,6 +91,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+    <script>
+        document.getElementById('full_name').innerHTML = "{{profile.full_name}}"
+        document.getElementById('age').innerHTML = "{{profile.age}}"
+        document.getElementById('weight').innerHTML = "{{profile.weight}}"
+        document.getElementById('height').innerHTML = "{{profile.height}}"
+    </script>
 
 </body>
 

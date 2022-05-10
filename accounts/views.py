@@ -7,7 +7,6 @@ from django.utils.encoding import force_bytes
 from django.contrib.auth import get_user_model
 from django.contrib import messages
 from .admin import UserCreationForm
-import requests,math,random
 from .models import *
 UserModel = get_user_model()
 

@@ -52,8 +52,23 @@
                                          <textarea id="comments" class="form-control " name="exercise_description" rows="5" cols="60" placeholder="Description"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <input type="time" class="form-control form-control-user" name="duration" id="exampleFirstName"
-                                        placeholder="Duration"></div>
+                                    Exercise Category:
+                                    <select name="exercise_category" class="form-control" >
+                                        <option value="single_pose">Pose (Single Pose in the entire video)</option>
+                                        <option value="multiple_pose">Workout(Multiple Poses in the entire video)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    Exercise Type:
+                                    <select name="exercise_type" class="form-control" >
+                                        <option value="full_body">Full body workout</option>
+                                        <option value="upper_body">Upper body workouts</option>
+                                        <option value="lower_body">Lower body workout</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="Number" class="form-control form-control-user" name="duration" id="exampleFirstName"
+                                        placeholder="Duration in seconds"></div>
                                         
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">

@@ -16,5 +16,5 @@ class UserProfile(models.Model):
 class UserProgress(models.Model):
     exercise = models.ForeignKey(Exercise,on_delete=models.SET_NULL, null=True)
     profile = models.ForeignKey(UserProfile,on_delete=models.CASCADE)
-    points_earned = models.IntegerField()
+    points_earned = models.FloatField()
     date_time = models.DateTimeField(default = django.utils.timezone.now)
