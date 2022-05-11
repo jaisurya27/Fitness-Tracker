@@ -14,7 +14,6 @@ reps = pose['reps']
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["ssg"]
 col = db["pose"]
-
    
 data = col.find_one({'_id': ObjectId(str(pose_id))})
 
@@ -57,12 +56,6 @@ max_avg = 0
 min_avg = 0
 max_angle = []
 min_angle = []
-max_12 = []
-min_12 = []
-avg_max_angle_diff=0
-avg_min_angle_diff=0
-max_score = 0
-min_score = 0
 count = 0
 initial_state = 0
 total_score = 0
